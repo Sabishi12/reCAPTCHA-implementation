@@ -8,9 +8,10 @@
     <script type="text/javascript" src="js/sweetalert.min.js"></script>
     <title>Login</title>
 </head>
+<!-- eto ang background picture ko-->
 <body  class="bg-gray-600 font-[sans-serif] bg-no-repeat bg-cover" style="background-image: url('img/BG3.JPG');">
     
-
+<!-- eto ang navbar ko with logo na kiss anime-->
 <nav class="bg-white border-gray-200 dark:bg-gray-900 ">
     <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
         <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
@@ -23,12 +24,14 @@
     </div>
 </nav>
 
-
+<!-- lagayan ng form nag lagay ako ng div para ma center at malagyan ng box-->
 <div>
       <div class=" flex flex-col items-center justify-center py-6">
         <div class="max-w-md w-full">
           <div class="p-8 rounded-2xl bg-white shadow bg-opacity-10">
             <h2 class="text-white text-center text-2xl font-bold">Log-in</h2>
+            
+            <!-- lagayab bg login at password input at button-->
             <form class="mt-8 space-y-4" method="post">
               <div>
                 <label class="text-white text-sm mb-2 block">User name</label>
@@ -64,9 +67,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // reCAPTCHA validation successful
         // Process your form data here
 ?>
-        
-
         <script>
+          // para syang modal pero hindi pop-up message pero ang tawag sakanya ay sweet alert
           swal("Form submitted successfully!", {
                 icon: "success",
                 buttons: false,
@@ -76,10 +78,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <?php
     } else {
         // reCAPTCHA validation failed
-        
 ?>
-
         <script>
+          // para syang modal pero hindi pop-up message pero ang tawag sakanya ay sweet alert
           swal("reCAPTCHA verification failed. Please try again.", {
                 icon: "error",
                 buttons: false,
@@ -89,7 +90,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 } else {
     // If not a POST request, redirect to the form page
-
     exit();
 }
 ?>
